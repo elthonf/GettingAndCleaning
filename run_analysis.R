@@ -49,6 +49,6 @@ tidyData <- allData[, c(1,2,grep("-mean|-std",colnames(allData)))]
 means = dcast(melt(tidyData, id.var = c("subject", "label")) , subject + label ~ variable, mean)
 
 # Create a new text file with the result
-write.table(means, file="meansData.txt")
+write.table(means, file=paste(path, "tidyMeansData.txt", sep = "/"))
 
 
