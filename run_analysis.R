@@ -25,7 +25,7 @@ allY <- rbind(testY, trainY)
 rm(testY)
 rm(trainY)
 allY <- merge(allY, activityLabels, by=1)[,2] #[,2] <- activityLabels[ allY[,1], 2]
-colnames(allY) <- c("Activity", "DescActivity")
+#colnames(allY) <- c("Activity", "DescActivity")
 
 # Merge the two X files into one; Assign the correct label to the columns
 allX <- rbind(testX, trainX)
